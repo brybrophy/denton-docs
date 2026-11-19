@@ -3,73 +3,78 @@
   "files": [
     {
       "path": "index.html",
-      "bytes": 16111,
-      "sha256": "e730a30ca43d579c970280b223f639eb49a4853f105a09d6ecf0fb5bb7de06f2"
+      "bytes": 16448,
+      "sha256": "9055fbd22e578aed4b1e87936e43a2a88f98e9e5e1d08bdb0149d3dd46e6b82a"
     },
     {
       "path": "docs/overview/index.html",
-      "bytes": 17817,
-      "sha256": "a291b1ed5c1e96372bcd85d8d19a431d8c757534915c0620f79b18aca945645e"
+      "bytes": 18154,
+      "sha256": "6063829b04e96ff1a5cdf99ae724056119440fd01922d29e3449d090e3e771a1"
     },
     {
       "path": "docs/getting-started/index.html",
-      "bytes": 20998,
-      "sha256": "2b28aaaa7d58e30f69c4e4325a512dca750db668b2d75875426be7b18b069b44"
+      "bytes": 21335,
+      "sha256": "bc5861aeea64e056da1ddc213ba40187f3285fe9c3c201defeb9878be64fa3bb"
     },
     {
       "path": "docs/concepts/index.html",
-      "bytes": 19103,
-      "sha256": "8512b7f2e31fa7f89ec2657bdd8281ffcb4343fd0acecf0a911141a502030e62"
+      "bytes": 19440,
+      "sha256": "49863e166dcb39e28e0542227d5e6c2332d16e7e32390197e1812f725be307a3"
     },
     {
       "path": "docs/semantic-authoring/index.html",
-      "bytes": 19712,
-      "sha256": "2f17865c36c53ba7c49f4e94f0f4ce86780c4b3426945af504f1d8b0c83af753"
+      "bytes": 20049,
+      "sha256": "e760898d6958f7334fac1722d014659cdab55dd7825269103e424f2ed4c12f0d"
     },
     {
       "path": "docs/compiler/index.html",
-      "bytes": 18997,
-      "sha256": "9a6612199177d135b8a7e248c593cfdbf6dda06ce24dc202a1fd10fd27bd1c34"
+      "bytes": 19334,
+      "sha256": "3497e9a29215af369fc64bd5497ca944b35e4e8c02e38092e51caaaacb397473"
     },
     {
       "path": "docs/troubleshooting-and-limits/index.html",
-      "bytes": 21686,
-      "sha256": "9fb81d082ae7b8496f10421498fd8ff57154fd10091d51e4df0726633db73b01"
+      "bytes": 22023,
+      "sha256": "70342c1d26c0c8a4b2e22e20f2d1a2518163b781d9bb5d9e012362b56d880a99"
     },
     {
       "path": "docs/mcp-tools/index.html",
-      "bytes": 18992,
-      "sha256": "eda5ccb46c156ad5082664b11f766f0589ad5f22d05da44ec312212af619bbda"
+      "bytes": 19329,
+      "sha256": "cbbf93c093cce8d24565bc425c4816bd238db9cdfb92f2e088d8c1480fa2c79c"
     },
     {
       "path": "docs/content-binding/index.html",
-      "bytes": 17791,
-      "sha256": "43d4faf95e140bcc9bf8f73115596d633983e9dc23f57098676f2e750a21dfba"
+      "bytes": 18128,
+      "sha256": "a39c465c378d5a25e3c6647499a000f52849d14cc68d24ede8c9d79afa47e299"
     },
     {
       "path": "docs/project-and-artifacts/index.html",
-      "bytes": 18070,
-      "sha256": "33a7c3719392f9026a0b5c9df94e18e5b58089a0705d93f29e92f47dbbbff1d0"
+      "bytes": 18407,
+      "sha256": "035a72c74360f516ba8e86c9e98048e752bfe52a82ba590bd9156588147ad439"
     },
     {
       "path": "docs/site-architecture/index.html",
-      "bytes": 17864,
-      "sha256": "0307d4c5d23f78089ebe49c061651cfaa1038a6440ade33ca19c6378cf3d7723"
+      "bytes": 18201,
+      "sha256": "aeaa3e495d1d8d47c99730e4833623207545c52cac7250523e53321562d3b861"
     },
     {
       "path": "docs/maintaining-this-site/index.html",
-      "bytes": 23459,
-      "sha256": "ca2eaaa946eba42847a7ba074c40b50eae36090cc8a0243a8b7f3d119d1b1c59"
+      "bytes": 23796,
+      "sha256": "638286abc84e820822b878f16afa938b28eb57fab363199c70cd8a2b267c96a0"
     },
     {
       "path": "search/index.html",
-      "bytes": 14390,
-      "sha256": "5d1b7e74609fbb368f6afa0e4eb4d32bae4afcae321974e221395500e03af9cc"
+      "bytes": 14727,
+      "sha256": "9b858e4cc235d105f16f634d71285682a1661a99b1706c4d3ac7f8f0a56b8b46"
     },
     {
       "path": "404.html",
-      "bytes": 11908,
-      "sha256": "a40dd6d2927ea28f0d62e7b0c5d43966ee246cc3725f633ffa637ca4970be163"
+      "bytes": 12302,
+      "sha256": "ab728b70558e1552c93bff2e9419f881852fa535f72c1b7ece9dfab509bb457e"
+    },
+    {
+      "path": "assets/graphfold.svg",
+      "bytes": 388,
+      "sha256": "2aebab29dfa75f22f333708204c92258a9b111851433417f4ad77426c66e989f"
     },
     {
       "path": "assets/search.json",

@@ -4,7 +4,7 @@ import { createHash } from "node:crypto";
 import { readFile, readdir, lstat } from "node:fs/promises";
 const manifest = JSON.parse(await readFile("site-manifest.json", "utf8"));
 const allowed =
-  /^(?:index\.html|404\.html|search\/index\.html|docs\/[a-z0-9-]+\/index\.html|assets\/search\.(?:js|json)|LICENSE\.txt|NOTICE\.txt|\.nojekyll)$/;
+  /^(?:index\.html|404\.html|search\/index\.html|docs\/[a-z0-9-]+\/index\.html|assets\/search\.(?:js|json)|assets\/graphfold\.svg|LICENSE\.txt|NOTICE\.txt|\.nojekyll)$/;
 if (
   manifest.base !== "/lindy-docs/" ||
   !Array.isArray(manifest.files) ||
