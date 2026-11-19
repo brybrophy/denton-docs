@@ -1,0 +1,100 @@
+{
+  "base": "/lindy-docs/",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 16111,
+      "sha256": "e730a30ca43d579c970280b223f639eb49a4853f105a09d6ecf0fb5bb7de06f2"
+    },
+    {
+      "path": "docs/overview/index.html",
+      "bytes": 17817,
+      "sha256": "a291b1ed5c1e96372bcd85d8d19a431d8c757534915c0620f79b18aca945645e"
+    },
+    {
+      "path": "docs/getting-started/index.html",
+      "bytes": 20998,
+      "sha256": "2b28aaaa7d58e30f69c4e4325a512dca750db668b2d75875426be7b18b069b44"
+    },
+    {
+      "path": "docs/concepts/index.html",
+      "bytes": 19103,
+      "sha256": "8512b7f2e31fa7f89ec2657bdd8281ffcb4343fd0acecf0a911141a502030e62"
+    },
+    {
+      "path": "docs/semantic-authoring/index.html",
+      "bytes": 19712,
+      "sha256": "2f17865c36c53ba7c49f4e94f0f4ce86780c4b3426945af504f1d8b0c83af753"
+    },
+    {
+      "path": "docs/compiler/index.html",
+      "bytes": 18997,
+      "sha256": "9a6612199177d135b8a7e248c593cfdbf6dda06ce24dc202a1fd10fd27bd1c34"
+    },
+    {
+      "path": "docs/troubleshooting-and-limits/index.html",
+      "bytes": 21686,
+      "sha256": "9fb81d082ae7b8496f10421498fd8ff57154fd10091d51e4df0726633db73b01"
+    },
+    {
+      "path": "docs/mcp-tools/index.html",
+      "bytes": 18992,
+      "sha256": "eda5ccb46c156ad5082664b11f766f0589ad5f22d05da44ec312212af619bbda"
+    },
+    {
+      "path": "docs/content-binding/index.html",
+      "bytes": 17791,
+      "sha256": "43d4faf95e140bcc9bf8f73115596d633983e9dc23f57098676f2e750a21dfba"
+    },
+    {
+      "path": "docs/project-and-artifacts/index.html",
+      "bytes": 18070,
+      "sha256": "33a7c3719392f9026a0b5c9df94e18e5b58089a0705d93f29e92f47dbbbff1d0"
+    },
+    {
+      "path": "docs/site-architecture/index.html",
+      "bytes": 17864,
+      "sha256": "0307d4c5d23f78089ebe49c061651cfaa1038a6440ade33ca19c6378cf3d7723"
+    },
+    {
+      "path": "docs/maintaining-this-site/index.html",
+      "bytes": 23459,
+      "sha256": "ca2eaaa946eba42847a7ba074c40b50eae36090cc8a0243a8b7f3d119d1b1c59"
+    },
+    {
+      "path": "search/index.html",
+      "bytes": 14390,
+      "sha256": "5d1b7e74609fbb368f6afa0e4eb4d32bae4afcae321974e221395500e03af9cc"
+    },
+    {
+      "path": "404.html",
+      "bytes": 11908,
+      "sha256": "a40dd6d2927ea28f0d62e7b0c5d43966ee246cc3725f633ffa637ca4970be163"
+    },
+    {
+      "path": "assets/search.json",
+      "bytes": 26554,
+      "sha256": "23cb176b753f9ae82b38eb5be4cb68ee63ca799c7a1fa7bb5bf02763f34baeba"
+    },
+    {
+      "path": "assets/search.js",
+      "bytes": 3711,
+      "sha256": "9083bb03055c4ca0c82a49b3d8ba2d86ef829990cc5cbd6c05b2a999945bcb8f"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 1069,
+      "sha256": "138c3cc0688ae509e87a2222a7e776ffa7d647d7e6318f79bcf14909af92cf10"
+    },
+    {
+      "path": "NOTICE.txt",
+      "bytes": 2216,
+      "sha256": "33bd7b837848be9bf7d2fd3f39d40b6229fc3e5f417d74b93e4065704f3028c6"
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

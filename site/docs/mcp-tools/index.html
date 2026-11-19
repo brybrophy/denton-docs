@@ -1,0 +1,640 @@
+<!doctype html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>CLI &amp; MCP · Lindy</title><style>:root {
+  color-scheme: light;
+  --ink: #17263b;
+  --muted: #536477;
+  --line: #e0e7ec;
+  --accent: #09664b;
+  --wash: #eef7f2;
+  --paper: #fff;
+  --canvas: #fafcfd;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: var(--ink);
+  background: var(--canvas);
+  font-synthesis: none;
+  line-height: 1.65;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+a {
+  color: var(--accent);
+  text-underline-offset: 0.22em;
+}
+button,
+input {
+  font: inherit;
+}
+button,
+a,
+input,
+summary {
+  touch-action: manipulation;
+}
+:focus-visible {
+  outline: 3px solid #177e65;
+  outline-offset: 4px;
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+h2,
+h3,
+h4,
+[id] {
+  scroll-margin-top: 100px;
+}
+p {
+  margin: 0 0 1.2em;
+}
+code,
+pre {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.88em;
+}
+code {
+  border: 1px solid var(--line);
+  background: #f1f5f7;
+  border-radius: 4px;
+  padding: 0.12em 0.3em;
+  overflow-wrap: anywhere;
+}
+pre code {
+  border: 0;
+  background: none;
+  padding: 0;
+  overflow-wrap: normal;
+  font-size: inherit;
+}
+pre {
+  margin: 0;
+  overflow: auto;
+  padding: 20px 24px;
+  line-height: 1.8;
+  tab-size: 2;
+  max-height: 650px;
+}
+.docs-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+.docs-skip {
+  position: fixed;
+  top: 8px;
+  left: 12px;
+  z-index: 20;
+  background: var(--ink);
+  color: #fff;
+  padding: 10px 18px;
+  transform: translateY(-160%);
+  border-radius: 6px;
+}
+.docs-skip:focus {
+  transform: none;
+}
+.docs-header {
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 0 max(28px, calc((100vw - 1450px) /2));
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.97);
+}
+.docs-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-size: 22px;
+  letter-spacing: -0.05em;
+  font-weight: 780;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.docs-brand-mark {
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: var(--ink);
+  color: #b6f2d5;
+  width: 34px;
+  height: 34px;
+  font-size: 21px;
+  letter-spacing: -0.06em;
+}
+.docs-header-label {
+  border-left: 1px solid var(--line);
+  padding-left: 28px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.docs-search {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.docs-search input {
+  min-width: 0;
+  width: 240px;
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #b6c3ce;
+  border-radius: 7px;
+  background: var(--canvas);
+  color: var(--ink);
+  font-size: 14px;
+}
+.docs-search input::placeholder {
+  color: #586a7b;
+}
+.docs-search button {
+  border: 1px solid #cedbd3;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background: var(--wash);
+  color: #07553e;
+  font-weight: 650;
+  font-size: 13px;
+  cursor: pointer;
+}
+.docs-layout {
+  max-width: 1450px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 238px minmax(0, 1fr);
+  gap: 56px;
+  padding: 42px 28px 0;
+}
+.docs-sidebar {
+  position: sticky;
+  top: 110px;
+  height: calc(100vh - 135px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding-right: 12px;
+}
+.docs-nav section {
+  margin-bottom: 26px;
+}
+.docs-nav h2 {
+  font-size: 11px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  color: #647587;
+  font-weight: 700;
+}
+.docs-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.docs-nav li {
+  margin: 2px 0;
+}
+.docs-nav a {
+  display: block;
+  padding: 7px 12px;
+  border-radius: 6px;
+  color: #4c5f73;
+  text-decoration: none;
+  font-size: 13px;
+  border-left: 2px solid transparent;
+  line-height: 1.55;
+}
+.docs-nav a:hover {
+  background: #f0f4f6;
+  color: var(--ink);
+}
+.docs-nav a[aria-current="page"] {
+  color: #07553e;
+  background: var(--wash);
+  border-left-color: #158062;
+  font-weight: 650;
+}
+.docs-main {
+  min-width: 0;
+  padding: 0 0 32px;
+  outline: none;
+}
+.docs-main > .docs-eyebrow {
+  margin: 2px 0 16px;
+}
+.docs-eyebrow {
+  font-size: 11px;
+  font-weight: 720;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  color: var(--accent);
+}
+.docs-title {
+  font-size: clamp(2rem, 3.1vw, 2.85rem);
+  font-weight: 760;
+  max-width: 25ch;
+  margin: 0 0 22px;
+}
+.docs-lead {
+  max-width: 70ch;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+.docs-document {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 175px;
+  gap: 44px;
+}
+.docs-prose {
+  font-size: 15px;
+  min-width: 0;
+  max-width: 76ch;
+  line-height: 1.85;
+}
+.docs-prose h2 {
+  font-size: 23px;
+  margin: 45px 0 18px;
+  padding-top: 6px;
+  border-top: 1px solid var(--line);
+  padding-top: 26px;
+}
+.docs-prose > h2:first-child {
+  margin-top: 0;
+}
+.docs-prose h3 {
+  font-size: 18px;
+  margin: 32px 0 14px;
+}
+.docs-prose h4 {
+  font-size: 16px;
+  margin: 24px 0 10px;
+}
+.docs-prose ul,
+.docs-prose ol {
+  padding-left: 23px;
+  margin: 16px 0 25px;
+}
+.docs-prose li {
+  padding-left: 4px;
+  margin-bottom: 9px;
+}
+.docs-prose li::marker {
+  color: #5d7c70;
+}
+.docs-code-block {
+  margin: 24px 0;
+  border: 1px solid #263d4b;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #12212f;
+  color: #dfebe6;
+  box-shadow: 0 4px 10px #13283d06;
+}
+.docs-code-label {
+  padding: 8px 22px;
+  background: #1b2e3d;
+  border-bottom: 1px solid #31434e;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b5d4c3;
+}
+.docs-toc {
+  position: sticky;
+  top: 116px;
+  height: max-content;
+  padding-left: 19px;
+  border-left: 1px solid var(--line);
+}
+.docs-toc ul,
+.docs-mobile-toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.docs-toc a {
+  font-size: 12px;
+  color: var(--muted);
+  display: block;
+  text-decoration: none;
+  padding: 6px 0;
+  line-height: 1.6;
+}
+.docs-toc a:hover {
+  color: var(--accent);
+}
+.docs-toc li[data-level="3"],
+.docs-toc li[data-level="4"] {
+  padding-left: 10px;
+}
+.docs-mobile-menu,
+.docs-mobile-toc {
+  display: none;
+}
+.docs-index {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 40px;
+  max-width: 940px;
+}
+.docs-card {
+  padding: 25px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+  position: relative;
+}
+.docs-card-number {
+  font:
+    12px ui-monospace,
+    monospace;
+  color: #456a5b;
+  margin-bottom: 20px;
+}
+.docs-card h2 {
+  font-size: 20px;
+  margin: 0 0 15px;
+}
+.docs-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.docs-card a {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 9px 0;
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--muted);
+  border-top: 1px solid #edf1f4;
+}
+.docs-card a:hover {
+  color: var(--accent);
+}
+.docs-card a span {
+  color: #517a68;
+}
+.docs-home .docs-title {
+  font-size: clamp(2.6rem, 4.6vw, 4rem);
+  line-height: 1.08;
+  max-width: 18ch;
+  letter-spacing: -0.055em;
+  margin-top: 28px;
+}
+.docs-home .docs-lead {
+  font-size: 18px;
+  max-width: 65ch;
+}
+.docs-pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  max-width: 76ch;
+  margin-top: 44px;
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+.docs-pager a {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  background: #fff;
+}
+.docs-pager a:last-child {
+  text-align: right;
+}
+.docs-pager span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.docs-pager strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+.docs-footer {
+  font-size: 12px;
+  color: #647587;
+  border-top: 1px solid var(--line);
+  margin-top: 56px;
+  padding-top: 22px;
+  max-width: 76ch;
+}
+.docs-results {
+  list-style: none;
+  padding: 0;
+  max-width: 76ch;
+}
+.docs-results li {
+  margin: 14px 0;
+}
+.docs-results a {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  padding: 24px;
+  text-decoration: none;
+}
+.docs-result-title {
+  font-size: 19px;
+  font-weight: 650;
+  display: block;
+  margin-bottom: 10px;
+}
+.docs-result-excerpt {
+  display: block;
+  color: var(--muted);
+  font-size: 14px;
+}
+.docs-mobile-menu summary,
+.docs-mobile-toc summary {
+  cursor: pointer;
+  font-weight: 600;
+  min-height: 44px;
+  padding: 12px 0;
+}
+.docs-mobile-toc {
+  margin-bottom: 24px;
+  border-block: 1px solid var(--line);
+}
+@media (max-width: 1250px) {
+  .docs-document {
+    display: block;
+  }
+  .docs-toc {
+    display: none;
+  }
+  .docs-mobile-toc {
+    display: block;
+  }
+  .docs-mobile-toc nav {
+    padding: 0 4px 18px;
+  }
+  .docs-mobile-toc a {
+    font-size: 13px;
+    display: block;
+    padding: 5px;
+  }
+  .docs-mobile-toc .docs-eyebrow {
+    display: none;
+  }
+  .docs-layout {
+    gap: 35px;
+    grid-template-columns: 210px minmax(0, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .docs-header {
+    height: auto;
+    min-height: 72px;
+    padding: 16px 20px;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .docs-header-label {
+    display: none;
+  }
+  .docs-brand {
+    font-size: 21px;
+  }
+  .docs-search {
+    flex: 1;
+    min-width: 0;
+  }
+  .docs-search input {
+    width: 100%;
+    min-width: 70px;
+  }
+  .docs-search button {
+    padding: 8px;
+  }
+  .docs-layout {
+    display: block;
+    padding: 30px 22px 0;
+  }
+  .docs-sidebar {
+    display: none;
+  }
+  .docs-mobile-menu {
+    display: block;
+    padding: 0 22px;
+    border-bottom: 1px solid var(--line);
+    background: white;
+  }
+  .docs-mobile-menu .docs-nav {
+    padding: 12px 0;
+    max-height: 55vh;
+    overflow: auto;
+  }
+  .docs-title {
+    font-size: 32px;
+  }
+  .docs-lead {
+    font-size: 16px;
+  }
+  .docs-home .docs-title {
+    font-size: 44px;
+    margin-top: 14px;
+  }
+  .docs-home .docs-lead {
+    font-size: 16px;
+  }
+  .docs-index {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 28px;
+  }
+  .docs-card {
+    padding: 22px;
+  }
+  .docs-document {
+    display: block;
+  }
+  .docs-prose {
+    font-size: 15px;
+  }
+  .docs-prose h2 {
+    font-size: 22px;
+  }
+  .docs-code-block pre {
+    padding: 16px;
+    font-size: 12px;
+  }
+  .docs-pager {
+    gap: 10px;
+  }
+  .docs-pager a {
+    padding: 12px;
+  }
+  .docs-footer {
+    margin-top: 36px;
+  }
+}
+@media (max-width: 420px) {
+  .docs-header {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .docs-search {
+    margin: 0;
+    width: 100%;
+  }
+  .docs-search input {
+    flex: 1;
+  }
+  .docs-index {
+    grid-template-columns: 1fr;
+  }
+  .docs-home .docs-title {
+    font-size: 39px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  a,
+  button {
+    transition:
+      background-color 0.12s,
+      color 0.12s,
+      border-color 0.12s;
+  }
+}
+
+.docs-recovery {
+  max-width: 900px;
+  margin: 64px auto;
+  padding: 0 24px;
+}
+</style></head><body><div class="docs-site"><a href="#main-content" class="docs-skip">Skip to content</a><header class="docs-header"><a href="/lindy-docs/" class="docs-brand"><span class="docs-brand-mark" aria-hidden="true">L</span>Lindy</a><span class="docs-header-label">Documentation</span><form class="docs-search" role="search" action="/lindy-docs/search/" method="get"><label for="site-query" class="docs-sr-only">Search documentation</label><input id="site-query" type="search" maxLength="128" placeholder="Search documentation" name="q" value=""/><button type="submit">Search</button></form></header><details class="docs-mobile-menu"><summary>Documentation</summary><nav aria-label="Documentation" class="docs-nav"><section><h2>Start Here</h2><ul><li><a href="/lindy-docs/docs/overview/">Overview</a></li><li><a href="/lindy-docs/docs/getting-started/">Quickstart</a></li></ul></section><section><h2>Build with Lindy</h2><ul><li><a href="/lindy-docs/docs/concepts/">Semantic Graph</a></li><li><a href="/lindy-docs/docs/semantic-authoring/">Review a Change</a></li><li><a href="/lindy-docs/docs/compiler/">Compile &amp; Run</a></li><li><a href="/lindy-docs/docs/troubleshooting-and-limits/">Troubleshooting</a></li></ul></section><section><h2>Reference</h2><ul><li><a href="/lindy-docs/docs/mcp-tools/" aria-current="page">CLI &amp; MCP</a></li><li><a href="/lindy-docs/docs/content-binding/">Data Bindings</a></li><li><a href="/lindy-docs/docs/project-and-artifacts/">Artifacts</a></li></ul></section><section><h2>Built with Lindy</h2><ul><li><a href="/lindy-docs/docs/site-architecture/">This Documentation Site</a></li><li><a href="/lindy-docs/docs/maintaining-this-site/">One Reviewed Change</a></li></ul></section></nav></details><div class="docs-layout"><aside class="docs-sidebar"><nav aria-label="Documentation" class="docs-nav"><section><h2>Start Here</h2><ul><li><a href="/lindy-docs/docs/overview/">Overview</a></li><li><a href="/lindy-docs/docs/getting-started/">Quickstart</a></li></ul></section><section><h2>Build with Lindy</h2><ul><li><a href="/lindy-docs/docs/concepts/">Semantic Graph</a></li><li><a href="/lindy-docs/docs/semantic-authoring/">Review a Change</a></li><li><a href="/lindy-docs/docs/compiler/">Compile &amp; Run</a></li><li><a href="/lindy-docs/docs/troubleshooting-and-limits/">Troubleshooting</a></li></ul></section><section><h2>Reference</h2><ul><li><a href="/lindy-docs/docs/mcp-tools/" aria-current="page">CLI &amp; MCP</a></li><li><a href="/lindy-docs/docs/content-binding/">Data Bindings</a></li><li><a href="/lindy-docs/docs/project-and-artifacts/">Artifacts</a></li></ul></section><section><h2>Built with Lindy</h2><ul><li><a href="/lindy-docs/docs/site-architecture/">This Documentation Site</a></li><li><a href="/lindy-docs/docs/maintaining-this-site/">One Reviewed Change</a></li></ul></section></nav></aside><main id="main-content" tabindex="-1" class="docs-main"><p class="docs-eyebrow">Reference</p><h1 class="docs-title">CLI &amp; MCP</h1><details class="docs-mobile-toc"><summary>On this page</summary><nav aria-label="On this page"><p class="docs-eyebrow">On this page</p><ul><li data-level="2"><a href="#select-a-project">Select a project</a></li><li data-level="2"><a href="#eight-tools">Eight tools</a></li><li data-level="2"><a href="#requests-and-results">Requests and results</a></li><li data-level="2"><a href="#keep-client-review-prompts">Keep client review prompts</a></li><li data-level="2"><a href="#content-maintenance">Content maintenance</a></li></ul></nav></details><div class="docs-document"><div class="docs-prose"><p>The local CLI and MCP server expose the same project operations. Your coding agent uses MCP to inspect and edit the selected application; integrations can call the CLI directly with typed JSON requests.</p><h2 id="select-a-project">Select a project</h2><p>The CLI uses --project to select a graph file. Init writes local client templates that pin the installed Node/CLI and reading-list graph. Attach them manually; the MCP connection selects one project at server startup. Keep the installed tools/project paths stable.</p><h2 id="eight-tools">Eight tools</h2><ul><li>lindy.search finds declarations by semantic query.</li><li>lindy.inspect returns a declaration and its relationships.</li><li>lindy.propose validates a candidate edit without applying it.</li><li>lindy.patch applies a patch to its expected revision.</li><li>lindy.validate checks application structure and architecture.</li><li>lindy.affected identifies impacted declarations.</li><li>lindy.compile compiles a revision and selects its generated artifacts.</li><li>lindy.artifact reads a bounded artifact chunk.</li></ul><p>Search, inspection, proposals, validation, affected analysis and artifact reads are read-only. Patch changes the graph. Compile writes compiler-owned output and selects the build; it does not deploy it.</p><h2 id="requests-and-results">Requests and results</h2><p>Requests use strict schemas for the selected operation and application profile. Patch and compile carry expectedRevision; artifact reads also carry the current manifest hash. Unknown fields and incompatible profile selections are rejected. Use the current application configuration instead of copying a request from another example.</p><p>MCP results are in structuredContent. Generated bodies are read through lindy.artifact rather than duplicated into text messages. CLI requests can use a JSON file or standard input through --request; state-changing CLI invocations require --approve as an invocation acknowledgement, in addition to reviewing the semantic proposal.</p><h2 id="keep-client-review-prompts">Keep client review prompts</h2><p>Init supplies project-local configuration templates; it does not register or start an agent and does not select a model. Retain manual per-call permissions. Codex uses:</p><div class="docs-code-block"><div class="docs-code-label">toml</div><pre tabindex="0" aria-label="toml code example"><code data-language="toml">default_tools_approval_mode = &quot;prompt&quot;
+</code></pre></div><p>Claude Code uses:</p><div class="docs-code-block"><div class="docs-code-label">json</div><pre tabindex="0" aria-label="json code example"><code data-language="json">{&quot;permissions&quot;:{&quot;ask&quot;:[&quot;mcp__lindy__*&quot;]}}
+</code></pre></div><p>The server name and permission pattern must agree. Open /mcp after starting your client and confirm the eight raw tool names listed above. A tool permission prompt is separate from human approval of the proposed application behavior.</p><h2 id="content-maintenance">Content maintenance</h2><p>The eight tools edit the application definition, not arbitrary data records. This site&#x27;s typed documentation records use the application-specific docs:author API described in <a href="/lindy-docs/docs/maintaining-this-site/">One Reviewed Change</a>. <a href="/lindy-docs/docs/content-binding/">Data Bindings</a> explains that separation.</p></div><aside class="docs-toc"><nav aria-label="On this page"><p class="docs-eyebrow">On this page</p><ul><li data-level="2"><a href="#select-a-project">Select a project</a></li><li data-level="2"><a href="#eight-tools">Eight tools</a></li><li data-level="2"><a href="#requests-and-results">Requests and results</a></li><li data-level="2"><a href="#keep-client-review-prompts">Keep client review prompts</a></li><li data-level="2"><a href="#content-maintenance">Content maintenance</a></li></ul></nav></aside></div><nav class="docs-pager" aria-label="Adjacent pages"><a href="/lindy-docs/docs/troubleshooting-and-limits/" rel="prev"><span>Previous</span><strong>Troubleshooting</strong></a><a href="/lindy-docs/docs/content-binding/" rel="next"><span>Next</span><strong>Data Bindings</strong></a></nav><footer class="docs-footer">Lindy</footer></main></div></div><script type="module" src="/lindy-docs/assets/search.js"></script></body></html>
