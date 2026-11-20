@@ -43,8 +43,8 @@
     },
     {
       "path": "docs/pack-standards/index.html",
-      "bytes": 19520,
-      "sha256": "854e72f8383419d91878aac97020b71eadaaaac957c23c4ade6b71da17f8c0f2"
+      "bytes": 19494,
+      "sha256": "efd8f7452176b180252571e40f1c792b8fde0c012955dbb0300a1bd9404b8623"
     },
     {
       "path": "docs/pack-react-next/index.html",
@@ -53,8 +53,8 @@
     },
     {
       "path": "docs/pack-postgres/index.html",
-      "bytes": 18257,
-      "sha256": "bb1a2d3a287e152425876a49c244ca2ea6cf5f44a6e0952b685a38c6d1f264a6"
+      "bytes": 18685,
+      "sha256": "e8a8abbdd6c557d07f5ecb93825d6ed2f63f1db4d0c9b6f110eb1403751168e4"
     },
     {
       "path": "docs/pack-kafka/index.html",
@@ -108,8 +108,8 @@
     },
     {
       "path": "assets/search.json",
-      "bytes": 41281,
-      "sha256": "9adc189fc18380c323900933b37808e6dfc42beeb7efd3745e4fd99ae791cd28"
+      "bytes": 41499,
+      "sha256": "29552c27b7097ce66cdd3069164c5a8cde0ed89b83e5e5d57469f18676151942"
     },
     {
       "path": "assets/search.js",
