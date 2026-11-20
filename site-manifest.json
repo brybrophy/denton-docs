@@ -43,8 +43,8 @@
     },
     {
       "path": "docs/content-binding/index.html",
-      "bytes": 18539,
-      "sha256": "3856c2d1e66708e30aaa4266da3337e9e572ea4cfde5e16516e0e2bd0da9356f"
+      "bytes": 20587,
+      "sha256": "74f798989dbe04f2e48d1b6bd899c12a59e74f73d0267fc04fe6652b06acb821"
     },
     {
       "path": "docs/project-and-artifacts/index.html",
@@ -78,8 +78,8 @@
     },
     {
       "path": "assets/search.json",
-      "bytes": 29284,
-      "sha256": "83763743827fc39ef8521682a3b07d23d1c0eab929af82bc96169a5b28e6cdaf"
+      "bytes": 30416,
+      "sha256": "9ef48dfb820e86c485b11de3465d4ff2020f62f4a269d8664b0d60e33c278d43"
     },
     {
       "path": "assets/search.js",
