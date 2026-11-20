@@ -38,18 +38,18 @@
     },
     {
       "path": "docs/convention-packs/index.html",
-      "bytes": 19577,
-      "sha256": "ffb09c69e60ece9a3c41e97d56082d4d0a68ef0503a6987be9a97de4d02a7995"
+      "bytes": 19574,
+      "sha256": "7451e1961d797f94be4aa73be69a9c669ab583efa0c688a58b33903f66f00fe3"
     },
     {
       "path": "docs/pack-standards/index.html",
-      "bytes": 18800,
-      "sha256": "a9f872a73b83cd7f3683d62feb3f8978a4ee6c1427aef54300ef13abfb76f2b8"
+      "bytes": 18874,
+      "sha256": "08a94deb79321c7e32270620a38408e1a04cb1f886f908a0e70db57089cc5008"
     },
     {
       "path": "docs/team-packs/index.html",
-      "bytes": 19941,
-      "sha256": "c4cc41ffb946f0506afcd71788b2dfe0ae4001fb4135807d7bd0aba54381959f"
+      "bytes": 19948,
+      "sha256": "e0750cb47a0d77e2a215ea052fc7f8adb492f200c8ed5e9a671b8b080da5768a"
     },
     {
       "path": "docs/mcp-tools/index.html",
@@ -93,8 +93,8 @@
     },
     {
       "path": "assets/search.json",
-      "bytes": 36680,
-      "sha256": "af6f452cca362fd7ac5f142ae419ba97a866569a5cd33a8de690cccf75968a96"
+      "bytes": 36585,
+      "sha256": "ab9e54a34910cf4996715a4feaa0130285880de78a5a5839a20dae7f0ecf40dc"
     },
     {
       "path": "assets/search.js",
