@@ -3,73 +3,73 @@
   "files": [
     {
       "path": "index.html",
-      "bytes": 16490,
-      "sha256": "84d65a118427f08307da4ba184a370f7e941d4771f50c67ff4f772ed94ff1cd9"
+      "bytes": 16556,
+      "sha256": "41b8f65a80844ca702c16f609fc367da21fec2263e3ca7008e599f377461a2ef"
     },
     {
       "path": "docs/overview/index.html",
-      "bytes": 18168,
-      "sha256": "58495d8ac881d64e3bee9a51dd60b8af4ac2f06b9ca1189b9e2ede085336a912"
+      "bytes": 18226,
+      "sha256": "4ca556d2ce0176d7a9d40db149f45eab72018a0ba20a051cf574b1a42185bb5a"
     },
     {
       "path": "docs/getting-started/index.html",
-      "bytes": 21149,
-      "sha256": "a5bdd6539954832a0a88554c7afb3ddabb898806847836b64124ce852f7d3111"
+      "bytes": 21822,
+      "sha256": "0e539c602c9cd45912f7d11d5557a597b2a092eff3a512b9c34e33b0a77fcd08"
     },
     {
       "path": "docs/concepts/index.html",
-      "bytes": 19482,
-      "sha256": "a1c8517447d553cba34ed28f2f8fbe33c87a4c52895c357938fa8b197618f4b9"
+      "bytes": 20431,
+      "sha256": "6f341dea3aad5ad5b1001ccc2ec009dc705d0845bed4dee1535c1b69a4dc84e6"
     },
     {
       "path": "docs/semantic-authoring/index.html",
-      "bytes": 20077,
-      "sha256": "acca5d0f04bc70b17d98b7bb048185a69822e00a7caa8b49362d5343142d6450"
+      "bytes": 21109,
+      "sha256": "496897d944e2629a349e53886a80303a7b24fd02a6bdc14c161ebefeb9ef014f"
     },
     {
       "path": "docs/compiler/index.html",
-      "bytes": 19362,
-      "sha256": "2c02e25d72e9e5db4de84c16c5ffb973aacf3be1bbf419d32fdde86f207d2456"
+      "bytes": 20025,
+      "sha256": "f1acf389c46ae11a104909d20132f4305e11bfdad6afcc96fd28f35a93a7fffb"
     },
     {
       "path": "docs/troubleshooting-and-limits/index.html",
-      "bytes": 22051,
-      "sha256": "e25bcd171cec17d58d6d16fc560ff825306b78de9d33064c28a5012c9b621820"
+      "bytes": 22782,
+      "sha256": "c520ba51dd17e6b158ea351545295b33f20c2f5c253eec9b8e362a79ea8d9799"
     },
     {
       "path": "docs/mcp-tools/index.html",
-      "bytes": 19357,
-      "sha256": "9fe69958c8cea63e7b8d53a75061e2a4c03a45ed6518caedc0c63f9b29beac98"
+      "bytes": 20096,
+      "sha256": "1ae1ce7a5954354d2abc200acdedb0fdee90ac26be969089428b85a1910dbed1"
     },
     {
       "path": "docs/content-binding/index.html",
-      "bytes": 18156,
-      "sha256": "5ea93374b876a041b6e0a8091c96349db811359552fccaec4e951c4fc46f49cd"
+      "bytes": 18539,
+      "sha256": "3856c2d1e66708e30aaa4266da3337e9e572ea4cfde5e16516e0e2bd0da9356f"
     },
     {
       "path": "docs/project-and-artifacts/index.html",
-      "bytes": 18435,
-      "sha256": "f0db2b6dbd14070cb7f4eddd0f3b44c2af8246cd5a5ec0384886c5d66c20bd50"
+      "bytes": 18761,
+      "sha256": "faff2d3dd4b7660b604edee174f53b0a22837f6f6bff01b6557159852d9346cc"
     },
     {
       "path": "docs/site-architecture/index.html",
-      "bytes": 18229,
-      "sha256": "cb8b6fa869862a9f638288677226cef115b3006aa2dd32e505556a175e252088"
+      "bytes": 18780,
+      "sha256": "79e2115f8905183a940e809b20342409947e1a2722ef4760272471406daffab7"
     },
     {
       "path": "docs/maintaining-this-site/index.html",
-      "bytes": 23824,
-      "sha256": "afdd6b09235374cb2f69211a18a125f53d4b4488790f6a7fd16e79fed69c4bca"
+      "bytes": 25452,
+      "sha256": "7e6c841f0ee249aefcc3adb18cfaf4faffdcb12ef7ceadc7a572951442f875d3"
     },
     {
       "path": "search/index.html",
-      "bytes": 14755,
-      "sha256": "631b4447ca4046916fc30e595efbe18f13f865d1e2dc28b0a1baa7d3513e4da1"
+      "bytes": 14789,
+      "sha256": "330e9f93dc443c301e26178ed2c9161b6f40ff306cfbed88ec95a23710a41481"
     },
     {
       "path": "404.html",
-      "bytes": 12302,
-      "sha256": "ab728b70558e1552c93bff2e9419f881852fa535f72c1b7ece9dfab509bb457e"
+      "bytes": 12378,
+      "sha256": "3dbc23624408150656c41e68f3109dbb632cc1d243e32b380b76d2b662aab31b"
     },
     {
       "path": "assets/graphfold.svg",
@@ -78,8 +78,8 @@
     },
     {
       "path": "assets/search.json",
-      "bytes": 26375,
-      "sha256": "5c51821be31c5ab27262c0ef2303c5d108ae68dfbf988a5586f4a27f637adfeb"
+      "bytes": 29284,
+      "sha256": "83763743827fc39ef8521682a3b07d23d1c0eab929af82bc96169a5b28e6cdaf"
     },
     {
       "path": "assets/search.js",
