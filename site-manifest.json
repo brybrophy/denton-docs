@@ -1,105 +1,105 @@
 {
-  "base": "/lindy-docs/",
+  "base": "/denton-docs/",
   "files": [
     {
       "path": "index.html",
-      "bytes": 21503,
-      "sha256": "223b022f72791270dbf386d57dc68e0a8d21accc8bbad9e9d24d8a7b659fac39"
+      "bytes": 21541,
+      "sha256": "f99c36a640dedcfd8397780ea9c349329fc96c67dac78983a4a72e6a38240ab0"
     },
     {
       "path": "docs/overview/index.html",
-      "bytes": 19469,
-      "sha256": "f7cb851c11e7e2c2847d69f19ad99205881a464a1df1d69970444d2940835c98"
+      "bytes": 19349,
+      "sha256": "a144ad5bc1409727cd7106828eedb2e7b043fae734ddbae56bcd3a1541c3c10f"
     },
     {
       "path": "docs/getting-started/index.html",
-      "bytes": 22761,
-      "sha256": "08a67ff4e12ee911a3a3db901ced826b96113e09d6f210df5f03ab0762ec6d3e"
+      "bytes": 18665,
+      "sha256": "2e182d75a2a7de913a4bedbe3e1813c281f17a60a4e4ad27de515e51c0f40888"
     },
     {
       "path": "docs/concepts/index.html",
-      "bytes": 21685,
-      "sha256": "73731e5e3c89114cf719642c98678b8d4127628e882a1cf7196b9f0294b4c0d1"
+      "bytes": 21726,
+      "sha256": "2aa9e54996e4522e1d4b67b050fce83b4daad130b0022ab65c45936a6e8dae93"
     },
     {
       "path": "docs/semantic-authoring/index.html",
-      "bytes": 22317,
-      "sha256": "6495093c362678d3d5a4879855c15b4062697b6a69e01bea0545d0f68a8f2b44"
+      "bytes": 22360,
+      "sha256": "be1a649e9c09ee1196bee8f5d9f471d6dc374b382e9c6228b5e67a167950afaa"
     },
     {
       "path": "docs/compiler/index.html",
-      "bytes": 21206,
-      "sha256": "7973b9e88bf9522756604d43176775e89a58ec8ad36f26bcacf97a0f2d11ff43"
+      "bytes": 20708,
+      "sha256": "d6beca32e07b74e987ce90831eb8be465e82d38526de9efd83c4ecf9b17db961"
     },
     {
       "path": "docs/troubleshooting-and-limits/index.html",
-      "bytes": 23734,
-      "sha256": "0ca86b367e0ea88ab01198681a880cac525f0db2b63cda2e7aedc178eb8a7323"
+      "bytes": 20965,
+      "sha256": "1b5fbdcd3d976df0098d942cee2c10f6a51b646be428e08c63964af35360fca1"
     },
     {
       "path": "docs/convention-packs/index.html",
-      "bytes": 20508,
-      "sha256": "852a5bffb65c2af6dbf0d6e073a2badb112ea7ab8a22c8e797d3c9711d383f60"
+      "bytes": 18932,
+      "sha256": "a4b084881799a2961114a6d81e94025b3f5182fddb15c93b001dd61bdff004d7"
     },
     {
       "path": "docs/pack-standards/index.html",
-      "bytes": 19808,
-      "sha256": "0a1e58d7b6eefedd2505a82c077e83c540a604009e575f8e8da9bcb9729b0566"
+      "bytes": 19853,
+      "sha256": "989bbfd6b7e88e463089a38fc5cd825bec355aee65264fba93b74fb461e9acac"
     },
     {
       "path": "docs/pack-react-next/index.html",
-      "bytes": 18694,
-      "sha256": "98f6c40e5d89751034ebfbb39c0153fe32e35f290e8a47f17991806fc51116b1"
+      "bytes": 18215,
+      "sha256": "03bff29885dd562109fe159e4863dd27a72072975c5dd2556756200bee67a4b0"
     },
     {
       "path": "docs/pack-postgres/index.html",
-      "bytes": 19016,
-      "sha256": "f3c42869e80d42ebf88fd1d69aaa75150249c777ff76f71e2c12d746a70addc5"
+      "bytes": 18537,
+      "sha256": "e8b226977cc3866c9558eb840bc38e5376b8c269cb97f4346c330b6c3ab1090f"
     },
     {
       "path": "docs/pack-kafka/index.html",
-      "bytes": 18672,
-      "sha256": "c078d95108510e1d3784c12c7b239ade701cd7adf2596cbf0f7c0e9dea00bf6a"
+      "bytes": 18200,
+      "sha256": "560d668ffc8c78b2b75a1e94dbf65a20ae42093c07ba88bd1bf210a59d795558"
     },
     {
       "path": "docs/team-packs/index.html",
-      "bytes": 20975,
-      "sha256": "92480ab5fd827cb04e4c7074ea34b8e5763b55764a30e8a212bffa330d698d25"
+      "bytes": 19934,
+      "sha256": "5078cbc655f6755fc96c4b3662667dd68c9737b943ebdf9e740216b39d64edc9"
     },
     {
       "path": "docs/mcp-tools/index.html",
-      "bytes": 21305,
-      "sha256": "7c1427616d5f627100b4628aac8f46c09b7099b1935675d3a2f21a8f5addad07"
+      "bytes": 18773,
+      "sha256": "017ef19dba878bff73b652ee3f0c5e738586cca5a2360bd78185aeeef600a64b"
     },
     {
       "path": "docs/content-binding/index.html",
-      "bytes": 20155,
-      "sha256": "a4df45555e23c6e261140a84a39a8a372361e883b6964f51f6079ac1c34c0ca4"
+      "bytes": 20198,
+      "sha256": "aeb9bbb888540b407c1e99ccf360346f6fdc15308ac6a4aefed35eaea4ed4d42"
     },
     {
       "path": "docs/project-and-artifacts/index.html",
-      "bytes": 19962,
-      "sha256": "a6e2d39fe0889e62d7f2aa22739160169fdfaffd1d33990dcb56ec1e3e2ce537"
+      "bytes": 19763,
+      "sha256": "148aa321781ba95dc6c3403d51a9ee47fca0f7425a8be4835fafc91ca57bfdfb"
     },
     {
       "path": "docs/site-architecture/index.html",
-      "bytes": 20054,
-      "sha256": "347fc8aa475f470a71a2bfe8aa956126b846cc75b4294140e9e722a6937c6ef1"
+      "bytes": 19784,
+      "sha256": "07b9ded7d0692ef5084b068279704d9ee4f7fc5798c2d2115fc8192c56ba4031"
     },
     {
       "path": "docs/maintaining-this-site/index.html",
-      "bytes": 26647,
-      "sha256": "b866dd1234624f8d0a036bfabe0c483f5776132174996132663713d78fcd8f44"
+      "bytes": 26475,
+      "sha256": "d51238a9f964cbf3e7847017f45faea2a8379a1f8d9b9f357aeacccfcdcf5a72"
     },
     {
       "path": "search/index.html",
-      "bytes": 16050,
-      "sha256": "f885eac6a4e0d7c7bd397048922baca57da214e3a603544981cfa8202905d18c"
+      "bytes": 16088,
+      "sha256": "4bdb9adb2f8901e037b38c99c7ead940fa826ffaaff1f1505baa9371879722c0"
     },
     {
       "path": "404.html",
-      "bytes": 12704,
-      "sha256": "1f9072e3b6214c68a021e5785440625019dbe06ce4892b1b7bc3e3b6e31c0851"
+      "bytes": 12709,
+      "sha256": "bcfc7de19fcdeb56ccdc7c2df3037355eb185702de053301ecb704848726b3bd"
     },
     {
       "path": "assets/graphfold.svg",
@@ -108,8 +108,8 @@
     },
     {
       "path": "assets/search.json",
-      "bytes": 40857,
-      "sha256": "f2724a97ad2b8182ef8e6b987c494b278997dfe9d393352e323d5dc4774acaa6"
+      "bytes": 34771,
+      "sha256": "ba332835c873279fbf6269c9b425d00b38a88ee219a64f117d985b72153e7bf5"
     },
     {
       "path": "assets/search.js",

@@ -6,7 +6,7 @@ const manifest = JSON.parse(await readFile("site-manifest.json", "utf8"));
 const allowed =
   /^(?:index\.html|404\.html|search\/index\.html|docs\/[a-z0-9-]+\/index\.html|assets\/search\.(?:js|json)|assets\/graphfold\.svg|LICENSE\.txt|NOTICE\.txt|\.nojekyll)$/;
 if (
-  manifest.base !== "/lindy-docs/" ||
+  manifest.base !== "/denton-docs/" ||
   !Array.isArray(manifest.files) ||
   manifest.files.length > 256
 )
@@ -48,7 +48,7 @@ async function inspect(dir) {
       throw Error("Static commitment mismatch");
     const text = new TextDecoder("utf-8", { fatal: true }).decode(data);
     if (
-      /sourceMappingURL|\/workspace\/|\/Users\/|file:\/\/|github\.com\/brybrophy\/Lindy(?:[/#?]|$)|github_pat_[A-Za-z0-9_]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/.test(
+      /sourceMappingURL|\/workspace\/|\/Users\/|file:\/\/|github\.com\/brybrophy\/(?!denton-docs(?:[/#?]|$))|github_pat_[A-Za-z0-9_]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/.test(
         text,
       )
     )
