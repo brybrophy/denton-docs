@@ -1,3 +1,66 @@
+//#region scripts/static-docs/guided-browser.ts
+const guide = document.querySelector("#try-a-change");
+if (guide) {
+	const get = (selector) => guide.querySelector(selector);
+	const review = get("[data-review]"), proposal = get("[data-proposal]"), reset = get("[data-reset]"), status = get("[data-status]"), keep = get("[data-keep]"), dialog = guide.querySelector("dialog");
+	const items = Array.from(guide.querySelectorAll("[data-item]"));
+	const original = status.textContent;
+	let selected;
+	review.hidden = false;
+	review.addEventListener("click", () => {
+		review.hidden = true;
+		proposal.hidden = false;
+		status.textContent = "Proposed change. Your reading list is unchanged.";
+		keep.focus();
+	});
+	keep.addEventListener("click", () => {
+		proposal.hidden = true;
+		review.hidden = false;
+		review.textContent = "Review again";
+		status.textContent = "Original kept. Both items and the editor are unchanged.";
+		review.focus();
+	});
+	get("[data-approve]").addEventListener("click", () => {
+		proposal.hidden = true;
+		reset.hidden = false;
+		for (const item of items) item.querySelector("button").hidden = false;
+		status.textContent = "Approved editor. Both items remain. Try removing one.";
+		items[0]?.querySelector("button")?.focus();
+	});
+	for (const item of items) item.querySelector("button").addEventListener("click", () => {
+		selected = item;
+		status.textContent = "Confirm or cancel removal of this sample item.";
+		get("[data-subject]").textContent = item.querySelector("span").textContent;
+		dialog.returnValue = "cancel";
+		dialog.showModal();
+		dialog.querySelector("button")?.focus();
+	});
+	dialog.addEventListener("close", () => {
+		if (!selected) return;
+		if (dialog.returnValue === "remove") {
+			selected.hidden = true;
+			status.textContent = "Item removed from this sample.";
+			(items.find((i) => !i.hidden)?.querySelector("button") ?? reset).focus();
+		} else {
+			status.textContent = "Removal canceled. Your item remains.";
+			selected.querySelector("button")?.focus();
+		}
+		selected = void 0;
+	});
+	reset.addEventListener("click", () => {
+		for (const item of items) {
+			item.hidden = false;
+			item.querySelector("button").hidden = true;
+		}
+		reset.hidden = true;
+		review.hidden = false;
+		review.textContent = "Review the change";
+		status.textContent = original;
+		guide.querySelector("details").open = false;
+		review.focus();
+	});
+}
+//#endregion
 //#region packages/docs-content/src/search.ts
 const searchTokens = (s) => [...new Set(s.replace(/[A-Z]/g, (c) => c.toLowerCase()).split(/[^a-z0-9]+/).filter(Boolean))];
 function searchContent(index, input) {

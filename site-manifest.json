@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "index.html",
-      "bytes": 18364,
-      "sha256": "46bd92c686cf3fc4e1d2bb91106ec73e2116b940f6f24f9095d41f5a4f627a6e"
+      "bytes": 21152,
+      "sha256": "b2666a75cef0881d383fadf92a6cc331fa5a52bd15528110444551efee2db2b3"
     },
     {
       "path": "docs/overview/index.html",
@@ -113,8 +113,8 @@
     },
     {
       "path": "assets/search.js",
-      "bytes": 3711,
-      "sha256": "9083bb03055c4ca0c82a49b3d8ba2d86ef829990cc5cbd6c05b2a999945bcb8f"
+      "bytes": 6103,
+      "sha256": "f3602cd1bf662aa42bd8475cd6d7c3c97f1d48fa87ac899073bf3240da0b38be"
     },
     {
       "path": "LICENSE.txt",
