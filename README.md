@@ -1,9 +1,7 @@
-# Lindy Documentation
+# Denton Documentation
 
-Lindy helps coding agents understand an application, propose a change you can review, and compile the approved change into working code.
+Denton (formerly Lindy) helps coding agents understand an application, propose changes for review, and compile the approved result.
 
-[Read the docs](https://brybrophy.github.io/lindy-docs/) for the reading-list walkthrough, worked examples, and the CLI and MCP reference.
+[Read the docs](https://brybrophy.github.io/lindy-docs/) for the Reading List Walkthrough, convention packs, and CLI and MCP reference.
 
-## Built with Lindy
-
-This repository publishes the generated documentation site. Its pages and navigation are maintained in Lindy's semantic source and rebuilt after review. The files in `site/` are generated, not edited by hand.
+This repository publishes the generated site. Its pages and navigation are maintained in semantic source and rebuilt after review.
